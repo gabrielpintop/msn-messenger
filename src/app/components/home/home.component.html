@@ -1,13 +1,13 @@
 <div class="home-container">
   <div class="white-border-glass-box">
     <div class="home-head-container">
-      <div class="row">
+      <div class="row" *ngIf="user">
         <div class="col-md-auto">
           <div class="avatar-frame-online">
-            <img id="homeAvatarPicture" src="../../../assets/img/generic_avatar.png" alt="Generic Avatar">
+            <img id="homeAvatarPicture" [src]="user.avatar || '../../../assets/img/generic_avatar.png'" alt="Generic Avatar">
           </div>
         </div>
-        <div *ngIf="user" class="col">
+        <div class="col">
           <b>{{user.nick}}</b>
           <div>
             <span>{{user.status}}</span>

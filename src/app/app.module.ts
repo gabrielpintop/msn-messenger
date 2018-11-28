@@ -8,6 +8,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
     AngularFireDatabaseModule,
     BrowserModule,
     FormsModule,
+    ImageCropperModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
