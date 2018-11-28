@@ -10,7 +10,6 @@ import { User } from 'src/app/interfaces/user';
 })
 export class ConversationComponent implements OnInit {
   friendId: any;
-  friends: User[];
   friend: User;
 
   constructor(
@@ -18,10 +17,17 @@ export class ConversationComponent implements OnInit {
     private userService: UserService
   ) {
     this.friendId = this.activatedRoute.snapshot.params['uid'];
-    this.friends = this.userService.getFriends();
-    this.friend = this.friends.find(record => {
-      return record.uid === this.friendId;
-    });
+    this.userService
+      .getUserById(this.friendId)
+      .valueChanges()
+      .subscribe(
+        (data: User) => {
+          this.friend = data;
+        },
+        err => {
+          console.log(err);
+        }
+      );
   }
 
   ngOnInit() {}

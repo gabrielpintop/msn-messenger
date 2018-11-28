@@ -16,13 +16,14 @@
         <p *ngIf="operation === 'register'">Already have an account? <a (click)="operation = 'logIn'">Log In</a></p>
         <p *ngIf="operation === 'logIn'">Don't have an account? <a (click)="operation = 'register'">Register</a></p>
         <div class="bordered-container">
-          <input class="form-control margin-top-15" type="email" placeholder="Email">
-          <input class="form-control margin-top-15" type="password" placeholder="Password">
-          <input *ngIf="operation === 'register'" class="form-control margin-top-15" type="text" placeholder="Nick">
+          <input class="form-control margin-top-15" type="email" placeholder="Email" [(ngModel)]="email">
+          <input class="form-control margin-top-15" type="password" placeholder="Password" [(ngModel)]="password">
+          <input *ngIf="operation === 'register'" class="form-control margin-top-15" type="text" placeholder="Nick"
+            [(ngModel)]="nick">
         </div>
         <div class="center margin-top-15">
-          <a *ngIf="operation === 'logIn'" class="btn btn-primary" href="">Log In</a>
-          <a *ngIf="operation === 'register'" class="btn btn-primary" href="">Sign Up</a>
+          <a *ngIf="operation === 'logIn'" class="btn btn-primary" (click)="logIn()">Log In</a>
+          <a *ngIf="operation === 'register'" class="btn btn-primary" (click)="register()">Sign Up</a>
         </div>
       </div>
     </div>
