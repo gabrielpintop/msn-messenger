@@ -4,7 +4,7 @@ Angular 6 + Firebase application that recreates the old (and loved) MSN messenge
 
 ___
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.7. and is made thanks to the knowledge and guidance received on the Platzi course "Angular 6".
 
 ## Development server
 
