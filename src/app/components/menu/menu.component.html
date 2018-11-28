@@ -1,4 +1,8 @@
-<img id="mainLogo" src="../../../assets/img/logo_live.png" alt="MSN Messenger Logo">
-<a [routerLink]="['/home']">Home</a> |
-<a [routerLink]="['/login']">Login</a> |
-<a [routerLink]="['/profile']">Profile</a>
+<div id="menuContainer">
+  <div routerLink="/home" class="item branding">
+    <img id="mainLogo" src="../../../assets/img/logo_live.png" alt="MSN Messenger Logo">
+  </div>
+  <div routerLink="/profile" class="item">
+    Profile
+  </div>
+</div>
