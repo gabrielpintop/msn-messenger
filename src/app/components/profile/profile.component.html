@@ -12,30 +12,30 @@
           Upload avatar
         </label>
       </div>
-      <div class="col-md-9">
+      <div *ngIf="user" class="col-md-9">
         <div>
           <label fixed>Nick</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [(ngModel)]="user.nick">
         </div>
         <div>
           <label fixed>Subnick</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [(ngModel)]="user.subnick">
         </div>
         <div>
           <label fixed>Email</label>
-          <input type="text" disabled class="form-control">
+          <input type="text" disabled class="form-control" [(ngModel)]="user.email">
         </div>
         <div>
           <label fixed>Status</label>
-          <select class="form-control">
+          <select class="form-control" [(ngModel)]="user.status">
             <option value="online">Online</option>
             <option value="away">Away</option>
             <option value="busy">Busy</option>
-            <option value="appear_offline">Desconnected</option>
+            <option value="disconnected">Disconnected</option>
           </select>
         </div>
         <hr />
-        <a class="btn btn-primary btn-block">Save</a>
+        <a class="btn btn-primary btn-block" (click)="saveSettings()">Save</a>
       </div>
     </div>
   </div>
