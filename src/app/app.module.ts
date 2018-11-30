@@ -21,6 +21,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SearchPipe } from './pipes/search';
 import { AuthenticationGuard } from './guards/authentication.guard';
 import { RequestComponent } from './modals/request/request.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     MenuComponent,
     ProfileComponent,
     SearchPipe,
-    RequestComponent
+    RequestComponent,
+    ContactComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
