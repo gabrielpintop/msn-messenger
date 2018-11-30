@@ -17,7 +17,6 @@
   z-index: 9;
   height: 56px;
   top: 0px;
-  border-top: 1px solid white;
 }
 
 .branding {
@@ -30,6 +29,5 @@
   padding: 15px;
   color: white;
   cursor: default;
-  border: 1px solid white;
   display: inline-block;
 }

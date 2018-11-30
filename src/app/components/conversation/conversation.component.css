@@ -108,9 +108,14 @@ img.conversation-picture {
 }
 
 .overscroll {
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .pabo10 {
   padding-bottom: 10px;
+}
+
+.avatar-frame-online {
+  max-width: 200px;
 }

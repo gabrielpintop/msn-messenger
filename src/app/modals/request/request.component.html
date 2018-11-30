@@ -1,0 +1,26 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      New request
+      <a class="close-button" (click)="close()">x</a>
+    </div>
+
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-12 text-center mb-2">
+          <img src="../../../assets/img/generic_avatar.png" class="img-fluid" width="200px" alt="">
+        </div>
+        <div class="col-12 text-center mb-3">
+          <b>{{currentRequest.sender}}</b>
+          <br />
+          <small>Sent you a friend request</small>
+        </div>
+        <div class="col-12 text-center">
+          <button type="button" class="btn btn-success mr-1" (click)="select('yes')">Accept</button>
+          <button type="button" class="btn btn-danger ml-1 mr-1" (click)="select('no')">Decline</button>
+          <button type="button" class="btn btn-info ml-1" (click)="select('later')">Later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
 /* You can add global styles to this file, and also import other style files */
 .avatar-frame-offline {
   background: #ffffff;
@@ -140,4 +145,8 @@ input[type="file"] {
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+
+.pointer {
+  cursor: pointer;
 }

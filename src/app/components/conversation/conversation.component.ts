@@ -72,7 +72,7 @@ export class ConversationComponent implements OnInit {
     const message = {
       uid: this.conversationId,
       timestamp: Date.now(),
-      text: null,
+      text: '_nudge_',
       sender: this.user.uid,
       receiver: this.friend.uid,
       seen: false,

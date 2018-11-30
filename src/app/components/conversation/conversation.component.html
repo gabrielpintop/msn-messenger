@@ -1,26 +1,24 @@
-<div class="conversation-container bluewhitebg" [ngClass]="{shaker: shake}">
+<div class="conversation-container bluewhitebg overflow-x-none" [ngClass]="{shaker: shake}">
   <div class="row">
     <div class="col-sm-3 maxwi300">
       <div id="conversationSidebar">
-        <div class="vh-30">
-          <div class="avatarFrameonline">
-            <img src="{{'assets/img/generic_avatar.png'}}" class="avatarImage img-fluid">
+        <div class="vh-30" *ngIf="friend">
+          <div class="avatar-frame-online">
+            <img [src]="friend.avatar || '../../../assets/img/generic_avatar.png'" class="avatarImage img-fluid">
           </div>
         </div>
         <div class="vh-30"></div>
-        <div class="vh-25">
-          <div class="avatarFrameonline">
-            <img src="{{'assets/img/generic_avatar.png'}}" class="avatarImage img-fluid">
-          </div>
-        </div>
       </div>
     </div>
     <div class="col-sm-9">
       <br />
-      <span class="friend-name">Amigo 1</span> (online)
+      <ng-container *ngIf="friend">
+        <span class="friend-name">{{friend.nick}}</span> ({{friend.status}})
+      </ng-container>
       <hr />
-      <div class="vh-55 overscroll padding-bottom-10" id="messageArea">
-        <div class="message-group" *ngFor="let message of conversation">
+      <div class="vh-55 overscroll padding-bottom-10 bg-white" id="messageArea">
+        <br />
+        <div class="message-group ml-3" *ngFor="let message of conversation">
           <b>{{getUserNickById(message.sender)}}</b> says: <br />
           <span>{{message.text}}</span>
         </div>
@@ -39,12 +37,6 @@
           <div class="item">
             <img src="../../../assets/img/zumbido.png" class="tool" (click)="sendNudge()">
           </div>
-
-          <a class="btn btn-primary btn-sm marri10" accept="image/*">Enviar</a>
-          <label class="custom-file-upload">
-            <input type="file">
-            <i name="image"></i> Seleccionar Imagen
-          </label>
         </div>
       </div>
     </div>
